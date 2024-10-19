@@ -7,14 +7,13 @@ from IPython.display import display
 # --------------------------------------------------------------
 
 df = pd.read_pickle('../../data/interim/data_resampled.pkl')
-
-
 # --------------------------------------------------------------
 # Plot single columns
 # --------------------------------------------------------------
 
 set_df = df[df['set'] == 1]
 plt.plot(set_df['acc_y'].reset_index(drop=True))
+
 
 # --------------------------------------------------------------
 # Plot all exercises
@@ -40,7 +39,6 @@ for label in df['label'].unique():
 mpl.style.use('seaborn-v0_8-deep')
 mpl.rcParams['figure.figsize'] = [20.0, 5.0]
 mpl.rcParams['figure.dpi'] = 100
-
 
 # --------------------------------------------------------------
 # Compare medium vs. heavy sets
